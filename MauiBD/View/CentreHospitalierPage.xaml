@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBD.View.CentreHospitalierPage"
+             Title="CentreHospitalierPage">
+    <ScrollView>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="05" >
+            <Label Grid.Row="0" FontSize="20" FontAttributes="Bold" TextColor="#ec1b23" Text="Selectionner un centre de proximité" Margin="0,20"/>
+            <Frame HasShadow="True" Grid.Row="1" Margin="0,10">
+                <Grid ColumnDefinitions="Auto,*,Auto">
+                    <Frame Grid.Column="0" BorderColor="#ec1b23" HeightRequest="40" WidthRequest="40" >
+                        <Label Text="M"  TextColor="Black" />
+                    </Frame>
+                    <Label Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" Text="Sainte Etienne" FontAttributes="Bold"/>
+                    <Button Grid.Column="2" FontAttributes="Bold" Text="Prendre rdv" CornerRadius="30" BackgroundColor="#ec1b23">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Button.GestureRecognizers>
+                    </Button>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="True" Grid.Row="2">
+                <Grid ColumnDefinitions="50,*,Auto">
+                    <Frame Grid.Column="0" BorderColor="#ec1b23" HeightRequest="40" WidthRequest="40" >
+                        <Label Text="M"  TextColor="Black" FontSize="10"/>
+                    </Frame>
+                    <Label Grid.Column="1" Text="Hopital général" FontSize="19" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Button Grid.Column="2" Text="Prendre rdv" FontAttributes="Bold" CornerRadius="30" BackgroundColor="#ec1b23">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Button.GestureRecognizers>
+                    </Button>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="True" Grid.Row="3" Margin="0,10">
+                <Grid ColumnDefinitions="50,*,Auto">
+                    <Frame Grid.Column="0" BorderColor="#ec1b23" HeightRequest="40" WidthRequest="40" >
+                        <Label Text="M"  TextColor="Black" FontSize="10"/>
+                    </Frame>
+                    <Label Grid.Column="1" Text="Cité Verte" FontSize="19" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Button Grid.Column="2" Text="Prendre rdv" FontAttributes="Bold" CornerRadius="30" BackgroundColor="#ec1b23">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Button.GestureRecognizers>
+                    </Button>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="True" Grid.Row="4" Margin="0,0">
+                <Grid ColumnDefinitions="50,*,Auto">
+                    <Frame Grid.Column="0" BorderColor="#ec1b23" HeightRequest="40" WidthRequest="40" >
+                        <Label Text="M"  TextColor="Black" FontSize="10"/>
+                    </Frame>
+                    <Label Grid.Column="1" Text="Hopital Bingo" FontSize="19" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Button Grid.Column="2" Text="Prendre rdv" FontAttributes="Bold" CornerRadius="30" BackgroundColor="#ec1b23">
+                        <Button.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Button.GestureRecognizers>
+                    </Button>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>
