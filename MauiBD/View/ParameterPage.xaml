@@ -7,15 +7,7 @@
              x:DataType="viewmodel:ParameterViewModel"
              Title="ParameterPage">
     <VerticalStackLayout Spacing="10" Margin="10">
-        <Frame HasShadow="True" BorderColor="#ec1b23">
-            <HorizontalStackLayout Spacing="10">
-                <Image Source="fermercle.png" Aspect="AspectFit" HeightRequest="30"/>
-                <Label Text="Modifier votre mot de passe" FontAttributes="Bold"/>
-            </HorizontalStackLayout>
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer/>
-            </Frame.GestureRecognizers>
-        </Frame>
+        
         <Frame HasShadow="True" BorderColor="#ec1b23">
             <HorizontalStackLayout Spacing="10" >
                 <Image Source="deconecter.png" Aspect="AspectFit" HeightRequest="30"/>

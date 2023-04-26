@@ -43,7 +43,7 @@
             Title="Profil"
             Icon="utilisateur">
             <ShellContent
-                ContentTemplate="{DataTemplate local:EditProfilPage}"
+                ContentTemplate="{DataTemplate local:ProfilPage}"
                 Route="Profile" />
         </Tab>
     </FlyoutItem>
@@ -77,6 +77,13 @@
         <ShellContent
             Route="Parameter"
             ContentTemplate="{DataTemplate local:ParameterPage}"/>
+    </FlyoutItem>
+    <FlyoutItem
+        Title="A propos"
+        Icon="cle">
+        <ShellContent
+            Route="apropos"
+            ContentTemplate="{DataTemplate local:ApropoPage}"/>
     </FlyoutItem>
 
 

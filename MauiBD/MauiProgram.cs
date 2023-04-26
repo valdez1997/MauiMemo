@@ -37,7 +37,9 @@ public static class MauiProgram
         builder.Services.AddTransient<EditPasswordPage>();
         builder.Services.AddTransient<ArticleDetailPage>();
         builder.Services.AddTransient<ParameterPage>();
-
+        builder.Services.AddTransient<EditPassword1Page>();
+        builder.Services.AddTransient<ApropoPage>();
+        builder.Services.AddTransient<ProfilPage>();
 
 
 
@@ -48,7 +50,11 @@ public static class MauiProgram
         builder.Services.AddSingleton<LoginService>();
         builder.Services.AddTransient<ArticleService>();
         builder.Services.AddTransient<LogoutService>();
-
+        builder.Services.AddTransient<ServiceHospital>();
+        builder.Services.AddTransient<ServiceCheckMail>();
+        builder.Services.AddTransient<ResetPasswordService>();
+        builder.Services.AddTransient<ServiceDisplayProfil>();
+       
 
 
         //ViewModel
@@ -62,6 +68,10 @@ public static class MauiProgram
         builder.Services.AddTransient<ArticleViewModel>();
         builder.Services.AddTransient<ArticleDetailViewModel>();
         builder.Services.AddTransient<ParameterViewModel>();
+        builder.Services.AddTransient<CenterHospitalViewModel>();
+        builder.Services.AddTransient<EditPassword1ViewModel>();
+        builder.Services.AddTransient<EditPasswordViewModel>();
+        builder.Services.AddTransient<ProfilViewModel>();
 
 #if DEBUG
         builder.Logging.AddDebug();

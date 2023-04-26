@@ -12,9 +12,11 @@ namespace MauiBD.ViewModel;
 public partial class LoginViewModel:BaseViewModel
 {
 
+    
+    LoginService loginservice;
+
     [ObservableProperty]
     public string email;
-    LoginService loginservice;
 
     [ObservableProperty]
     public string password;
@@ -29,7 +31,7 @@ public partial class LoginViewModel:BaseViewModel
     async void EditPassword()
     {
         //Shell.Current.Navigation.PushAsync(new View.EditPasswordPage());
-        await Shell.Current.GoToAsync($"{nameof(EditPasswordPage)}");
+        await Shell.Current.GoToAsync($"{nameof(EditPassword1Page)}");
     }
     
     async void Regist()
@@ -52,6 +54,8 @@ public partial class LoginViewModel:BaseViewModel
        var accesToken = (await loginservice.Postlogin(user)).token;
         Constant.AuthToken = accesToken;
         Constant.AuthName = (await loginservice.Postlogin(user)).name;
+        var ids = (await loginservice.Postlogin(user)).id;
+        Constant.Authid= ids;
 
 
         if ((Email == null) && (Password == null))

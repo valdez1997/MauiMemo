@@ -11,16 +11,23 @@ public partial class ParameterViewModel:BaseViewModel
 {
     LogoutService logoutService;
     public ICommand LogoutCommand { get; private set; }
+    public ICommand NavigateEdit1Command { get; private set; }
     public ParameterViewModel(LogoutService logoutService) 
     {
         this.logoutService = logoutService;
         LogoutCommand = new Command(Logout);
+        NavigateEdit1Command = new Command(NavigationEditPassword1);
     }
-    [RelayCommand]
+   /* [RelayCommand]
     async void EditPassword()
     {
         //Shell.Current.Navigation.PushAsync(new View.EditPasswordPage());
         await Shell.Current.GoToAsync($"{nameof(EditPasswordPage)}");
+    }*/
+   
+    public async void NavigationEditPassword1()
+    {
+        await Shell.Current.GoToAsync(nameof(EditPassword1Page));
     }
 
     public async void Logout()

@@ -2,6 +2,7 @@
 
 using CommunityToolkit.Mvvm.ComponentModel;
 
+
 namespace MauiBD.ViewModel;
 
 public partial class BaseViewModel:ObservableObject
@@ -11,17 +12,18 @@ public partial class BaseViewModel:ObservableObject
 
     }
 
-    [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
-    bool isBusy;
+
     [ObservableProperty]
     string authName;
 
-    public bool IsNotBusy => !IsBusy;
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
+    bool isBusy;
 
     [ObservableProperty]
     string title;
 
-   
+    public bool IsNotBusy => !IsBusy;
+
 
 }

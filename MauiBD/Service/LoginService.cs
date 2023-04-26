@@ -16,9 +16,7 @@ public class LoginService
     }
     public async Task<UserLogin> Postlogin(UserLoginSen item)
     {
-        // Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
-        //var result = new List<string>() ;
-        
+       
         var results=new UserLogin();
         try
         {

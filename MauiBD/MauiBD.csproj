@@ -35,7 +35,7 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\logo4.png" Color="#ec1b23" BaseSize="110,115" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -68,15 +68,26 @@
 	  <None Remove="Resources\Images\unlock.png" />
 	  <None Remove="Resources\Images\utilisateur.png" />
 	  <None Remove="Resources\Images\voir.png" />
+	  <None Remove="Resources\Splash\logo2.png" />
+	  <None Remove="Resources\Splash\logo4.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Splash\logo2.png" />
+	  <MauiImage Include="Resources\Splash\logo4.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Plugin.Maui.ExpansionPanel" Version="1.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\ApropoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ArticleDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -84,6 +95,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\CentreHospitalierPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\EditPassword1Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\EditPasswordPage.xaml">
@@ -99,6 +113,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ParameterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ProfilPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Rdv2Page.xaml">
